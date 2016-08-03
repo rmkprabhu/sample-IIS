@@ -7,7 +7,7 @@ using System.Configuration;
 
 public partial class MyAccount : System.Web.UI.Page
 {
-    public static string TenantUrl = ConfigurationManager.AppSettings["TenantUrl"].ToString();
+    public static string TenantUrl = ConfigurationManager.AppSettings["TenantUrl"].ToString(); 
     public static string AdminServiceAccount = ConfigurationManager.AppSettings["AdminServiceAccount"].ToString();
     public static string AdminServicePass = ConfigurationManager.AppSettings["AdminServicePass"].ToString();
 
