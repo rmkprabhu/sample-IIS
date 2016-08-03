@@ -1,0 +1,120 @@
+﻿<%--
+ * Copyright 2016 Centrify Corporation
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ * 
+ *  http://www.apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ **/
+--%>
+
+<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Site.master.cs" Inherits="SiteMaster" %>
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%: Page.Title %> - My ASP.NET Application</title>
+
+    <asp:PlaceHolder runat="server">
+        <%: Scripts.Render("~/bundles/modernizr") %>
+    </asp:PlaceHolder>
+    <webopt:BundleReference runat="server" Path="~/Content/css" />
+    <link rel="stylesheet" href="Content/reset.css" type="text/css" media="all">
+    <link rel="stylesheet" href="Content/bootstrap.css" type="text/css" media="all">
+    <link rel="stylesheet" href="Content/style.css" type="text/css" media="all">
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+
+</head>
+<body>
+    <form runat="server">
+        <asp:ScriptManager ID="ScriptManager1" runat="server" EnablePageMethods="true">
+            <Scripts>
+                <%--To learn more about bundling scripts in ScriptManager see http://go.microsoft.com/fwlink/?LinkID=301884 --%>
+                <%--Framework Scripts--%>
+                <asp:ScriptReference Name="MsAjaxBundle" />
+                <asp:ScriptReference Name="jquery" />
+                <asp:ScriptReference Name="bootstrap" />
+                <asp:ScriptReference Name="respond" />
+                <asp:ScriptReference Name="WebForms.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebForms.js" />
+                <asp:ScriptReference Name="WebUIValidation.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebUIValidation.js" />
+                <asp:ScriptReference Name="MenuStandards.js" Assembly="System.Web" Path="~/Scripts/WebForms/MenuStandards.js" />
+                <asp:ScriptReference Name="GridView.js" Assembly="System.Web" Path="~/Scripts/WebForms/GridView.js" />
+                <asp:ScriptReference Name="DetailsView.js" Assembly="System.Web" Path="~/Scripts/WebForms/DetailsView.js" />
+                <asp:ScriptReference Name="TreeView.js" Assembly="System.Web" Path="~/Scripts/WebForms/TreeView.js" />
+                <asp:ScriptReference Name="WebParts.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebParts.js" />
+                <asp:ScriptReference Name="Focus.js" Assembly="System.Web" Path="~/Scripts/WebForms/Focus.js" />
+                <asp:ScriptReference Name="WebFormsBundle" />
+                <asp:ScriptReference Path="Scripts/FixFocus.js" />
+                <%--Site Scripts--%>
+            </Scripts>
+        </asp:ScriptManager>
+
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 header">
+            <div class="row">
+                <div class="col-lg-offset-1 col-lg-10 col-md-offset-0 col-md-12 col-sm-offset-0 col-sm-12 col-xs-12">
+                    <div class="row">
+                        <nav class="navbar" role="navigation">
+                            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 ">
+                                <a class="" href="http://www.centrify.com/" title="Centrify">
+                                    <div class="sfimageWrp">
+                                        <img id="logoPlaceholder_T04B0B661001_ctl00_ctl00_imageItem" title="MedAvante" src="/images/logo.png" alt="Centrify">
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9">
+                                <div class="row">
+                                    <div class="collapse-menu navbar-collapse no-move" id="submenu1">
+                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding">
+                                            <br />
+                                            <br />
+                                            <br />
+                                            <br />
+                                            <div class="navbar-right">
+                                                <div class="menu-main-menu-container">
+                                                    <div class="navbar-collapse collapse">
+                                                        <ul class="nav navbar-nav">
+                                                            <li><a runat="server" href="~/Default">Home</a></li>
+                                                            <li><a runat="server" href="~/Applications">Applications</a></li>                                                           
+                                                            <li><a id="Manage" runat="server" href="~/Manage">Manage</a></li>
+                                                            <li><a id="MyAccount" runat="server" href="~/MyAccount">MyAccount</a></li>
+                                                            <li><a runat="server" href="~/Register">Register</a></li>
+                                                            <li><a runat="server" href="~/Login">Login</a></li>
+                                                        </ul>                                                        
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <!--end  navbar-collapse -->
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container body-content">
+            <asp:ContentPlaceHolder ID="PageLoading" runat="server">
+            </asp:ContentPlaceHolder>
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            </asp:ContentPlaceHolder>
+            <hr />
+            <footer>
+                <p>&copy; <%: DateTime.Now.Year %> Centrify Corporation. All rights reserved.</p>
+            </footer>
+        </div>
+    </form>
+</body>
+</html>
