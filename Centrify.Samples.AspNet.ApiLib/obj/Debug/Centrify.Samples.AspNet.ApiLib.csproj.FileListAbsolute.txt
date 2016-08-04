@@ -1,0 +1,9 @@
+C:\Users\admin\Documents\Visual Studio 2015\Projects\centrify-samples-aspnet-registration\Centrify.Samples.AspNet.ApiLib\bin\Debug\Centrify.Samples.AspNet.ApiLib.dll
+C:\Users\admin\Documents\Visual Studio 2015\Projects\centrify-samples-aspnet-registration\Centrify.Samples.AspNet.ApiLib\bin\Debug\Centrify.Samples.AspNet.ApiLib.pdb
+C:\Users\admin\Documents\Visual Studio 2015\Projects\centrify-samples-aspnet-registration\Centrify.Samples.AspNet.ApiLib\obj\Debug\Centrify.Samples.AspNet.ApiLib.dll
+C:\Users\admin\Documents\Visual Studio 2015\Projects\centrify-samples-aspnet-registration\Centrify.Samples.AspNet.ApiLib\obj\Debug\Centrify.Samples.AspNet.ApiLib.pdb
+C:\Users\admin\Documents\Visual Studio 2015\Projects\centrify-samples-aspnet-server\Centrify.Samples.AspNet.ApiLib\bin\Debug\Centrify.Samples.AspNet.ApiLib.dll
+C:\Users\admin\Documents\Visual Studio 2015\Projects\centrify-samples-aspnet-server\Centrify.Samples.AspNet.ApiLib\bin\Debug\Centrify.Samples.AspNet.ApiLib.pdb
+C:\Users\admin\Documents\Visual Studio 2015\Projects\centrify-samples-aspnet-server\Centrify.Samples.AspNet.ApiLib\obj\Debug\Centrify.Samples.AspNet.ApiLib.csprojResolveAssemblyReference.cache
+C:\Users\admin\Documents\Visual Studio 2015\Projects\centrify-samples-aspnet-server\Centrify.Samples.AspNet.ApiLib\obj\Debug\Centrify.Samples.AspNet.ApiLib.dll
+C:\Users\admin\Documents\Visual Studio 2015\Projects\centrify-samples-aspnet-server\Centrify.Samples.AspNet.ApiLib\obj\Debug\Centrify.Samples.AspNet.ApiLib.pdb

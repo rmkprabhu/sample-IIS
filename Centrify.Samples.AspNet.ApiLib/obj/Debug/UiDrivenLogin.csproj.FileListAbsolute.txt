@@ -1,0 +1,5 @@
+C:\Users\admin\Documents\Visual Studio 2015\Projects\centrify-samples-aspnet-server\UiDrivenLogin\obj\Debug\UiDrivenLogin.csprojResolveAssemblyReference.cache
+C:\Users\admin\Documents\Visual Studio 2015\Projects\centrify-samples-aspnet-server\UiDrivenLogin\bin\Debug\UiDrivenLogin.dll
+C:\Users\admin\Documents\Visual Studio 2015\Projects\centrify-samples-aspnet-server\UiDrivenLogin\bin\Debug\UiDrivenLogin.pdb
+C:\Users\admin\Documents\Visual Studio 2015\Projects\centrify-samples-aspnet-server\UiDrivenLogin\obj\Debug\UiDrivenLogin.dll
+C:\Users\admin\Documents\Visual Studio 2015\Projects\centrify-samples-aspnet-server\UiDrivenLogin\obj\Debug\UiDrivenLogin.pdb
