@@ -30,6 +30,7 @@ public partial class Register : Page
     public static string TenantUrl = ConfigurationManager.AppSettings["TenantUrl"].ToString();
     public static string AdminServiceAccount = ConfigurationManager.AppSettings["AdminServiceAccount"].ToString();
     public static string AdminServicePass = ConfigurationManager.AppSettings["AdminServicePass"].ToString();
+    public static string DefaultDomain = ConfigurationManager.AppSettings["DefaultDomain"].ToString();
 
     protected void Page_Load(object sender, EventArgs e)
     {
@@ -68,7 +69,7 @@ public partial class Register : Page
 
             //Call the create user api and pass the contents of our registration form.
             CDUser cUser = new CDUser();
-            cUser.Name = LoginName.Text + "@apidemo.com";
+            cUser.Name = LoginName.Text + DefaultDomain;
             cUser.Mail = Email.Text;
             cUser.DisplayName = DisplayName.Text;
             cUser.Password = Password.Text;
