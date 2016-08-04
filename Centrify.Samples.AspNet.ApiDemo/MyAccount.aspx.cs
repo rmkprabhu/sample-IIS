@@ -68,29 +68,54 @@ public partial class MyAccount : System.Web.UI.Page
         }
 
         //Get User Info
-        Dictionary<string, dynamic> getUserResult = userManagementClient.GetUser();
+        Dictionary<string, dynamic> getUser = userManagementClient.GetUser();
+        Dictionary<string, dynamic> getUserResult = getUser["Result"];
         //Get User UUID
-        Dictionary<string, dynamic> queryResult = serviceUserManagementClient.Query(@"select ID from cduser where Name ='" + getUserResult["Result"]["Name"] + "'");
+        Dictionary<string, dynamic> queryResult = serviceUserManagementClient.Query(@"select ID from cduser where Name ='" + getUserResult["Name"] + "'");
 
         int queryCount = queryResult["Count"];
 
         if (queryCount == 1)
         {
             //split the username and domain name. add user name into LoginName text box and select the correct domain in the alias dropdown.
-            string s = getUserResult["Result"]["Name"];
+            string s = getUserResult["Name"];
             string[] userName = s.Split('@');
 
             Alias_DropDownList.Items.FindByText(userName[1]).Selected = true;
 
+
             //populate user info
             LoginName.Text = userName[0];
             UserUUID.Text = queryResult["Results"][0]["Row"]["ID"];
-            DisplayName.Text = getUserResult["Result"]["DisplayName"];
-            Email.Text = getUserResult["Result"]["Mail"];
-            OfficeNumber.Text = getUserResult["Result"]["OfficeNumber"];
-            MobileNumber.Text = getUserResult["Result"]["MobileNumber"];
-            HomeNumber.Text = getUserResult["Result"]["HomeNumber"];
-            InEverybodyRole.Checked = getUserResult["Result"]["InEverybodyRole"];
+            Email.Text = getUserResult["Mail"];
+
+            //check that optional attributes are populated
+            if (getUserResult.ContainsKey("DisplayName"))
+            {
+                DisplayName.Text = getUserResult["DisplayName"];
+            }
+
+            if (getUserResult.ContainsKey("OfficeNumber"))
+            {
+                OfficeNumber.Text = getUserResult["OfficeNumber"];
+            }
+
+            if (getUserResult.ContainsKey("MobileNumber"))
+            {
+                MobileNumber.Text = getUserResult["MobileNumber"];
+            }
+
+            if (getUserResult.ContainsKey("HomeNumber"))
+            {
+                HomeNumber.Text = getUserResult["HomeNumber"];
+            }
+
+            if (getUserResult.ContainsKey("InEverybodyRole"))
+            {
+                InEverybodyRole.Checked = getUserResult["InEverybodyRole"];
+            }
+
+
 
             //show/hide elements        
             UserInfo_div.Visible = true;

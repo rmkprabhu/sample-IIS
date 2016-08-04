@@ -55,6 +55,9 @@
             <div id="Login_Div" runat="server">
                 <br />
                 <h3>Please Sign In</h3>
+                This page is a full integration of Centrify Adaptive Authentication, which includes support for Custom Authentication Profiles, MFA, and Social Login. This page was created using the <a runat="server" href="http://developer.centrify.com/site/global/documentation/api_reference/security/start_authentication/index.gsp">security/start_authentication </a> API and the <a runat="server" href="http://developer.centrify.com/site/global/documentation/api_reference/security/advance_authentication/index.gsp">security/advance_authentication </a> API. For more information, please visit the <a runat="server" href="http://developer.centrify.com/site/global/documentation/api_guide/authenticating_users/index.gsp">Authenticating Users </a> guide on the developer portal. 
+                <br />
+                <hr />
                 <br />
                 <div class="row">
                     <div class="row">

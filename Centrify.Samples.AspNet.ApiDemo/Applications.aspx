@@ -26,9 +26,12 @@
         </asp:PlaceHolder>
     </div>
     <div class="row" runat="server" id="Apps">
+        <br />
         <h2>Centrify Applications</h2>
         <p>
-            This is a list of applications from Centrify that you are allowed to access
+            This is a list of applications from Centrify that you are allowed to access. This page was created using the <a runat="server" href="http://developer.centrify.com/site/global/documentation/api_reference/uprest/get_up_data/index.gsp">uprest/get_up_data </a> API. For more information, please visit the <a runat="server" href="http://developer.centrify.com/site/global/documentation/api_guide/adding_applications_to_a_website/index.gsp">Adding Applications to a Website </a> guide on the developer portal. 
         </p>
+        <br />
+        <hr />
     </div>
 </asp:Content>
