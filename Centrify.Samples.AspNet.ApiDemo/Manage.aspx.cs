@@ -65,6 +65,8 @@ public partial class Manage : System.Web.UI.Page
 
     protected void User_Search(object sender, EventArgs e)
     {
+        Alias_DropDownList.Items.Clear();
+
         //Pull authentication client from session
         RestClient authenticationClient = (RestClient)Session["AuthenticaitonClient"];
 
