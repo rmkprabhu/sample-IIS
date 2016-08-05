@@ -130,6 +130,10 @@ public partial class Manage : System.Web.UI.Page
             {
                 InEverybodyRole.Checked = getUserResult["InEverybodyRole"];
             }
+            if (getUserResult.ContainsKey("PasswordNeverExpire"))
+            {
+                PassNeverExpires.Checked = getUserResult["PasswordNeverExpire"];
+            }
 
             //show/hide elements
             Manage_Start_div.Visible = false;
