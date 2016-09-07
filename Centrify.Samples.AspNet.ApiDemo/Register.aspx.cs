@@ -78,7 +78,7 @@ public partial class Register : Page
             cUser.MobileNumber = MobileNumber.Text;
             cUser.HomeNumber = HomeNumber.Text;
 
-            createUserResult = userManagementClient.CreateUser(cUser, false, true, true, false, true);
+            createUserResult = userManagementClient.CreateUser(cUser, false, false, false, false, true);
         }
         //The passwords did not match
         else
