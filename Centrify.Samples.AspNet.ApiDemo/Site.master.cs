@@ -71,6 +71,7 @@ public partial class SiteMaster : MasterPage
         {
             Manage.Visible = false;
             MyAccount.Visible = false;
+            Applications.Visible = false;
         }
     }
 

@@ -46,7 +46,7 @@
                         <asp:Label runat="server" ID="LoginName_Label" AssociatedControlID="LoginName" CssClass="col-md-2 control-label">Login Name</asp:Label>
                         
                             
-                            <asp:TextBox runat="server" ID="LoginName" CssClass="form-control" /> <a id="defaultDomainLabel" runat="server" >@apidemo.com </a>
+                            <asp:TextBox runat="server" ID="LoginName" CssClass="form-control" /> <a id="defaultDomainLabel" runat="server" ></a>
       
                         </div>
                     </div>

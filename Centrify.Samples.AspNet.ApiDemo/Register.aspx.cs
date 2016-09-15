@@ -33,8 +33,7 @@ public partial class Register : Page
     public static string DefaultDomain = ConfigurationManager.AppSettings["DefaultDomain"].ToString();
 
     protected void Page_Load(object sender, EventArgs e)
-    {
-        defaultDomainLabel.InnerText = DefaultDomain;
+    {      
     }
 
     protected void Submit_Registration(object sender, EventArgs e)

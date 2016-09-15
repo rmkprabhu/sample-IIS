@@ -25,6 +25,7 @@ using System.Configuration;
 public partial class Login : System.Web.UI.Page
 {
     public static string TenantUrl = ConfigurationManager.AppSettings["TenantUrl"].ToString();
+    public static string DefaultDomain = ConfigurationManager.AppSettings["DefaultDomain"].ToString();
 
     protected void Page_Load(object sender, EventArgs e)
     {
@@ -38,7 +39,7 @@ public partial class Login : System.Web.UI.Page
     }
     protected void StartAuthentication(object sender, EventArgs e)
     {
-        RestClient authenticationClient = UiDrivenLogin.Authenticate(TenantUrl, UserName_TextBox.Text);
+        RestClient authenticationClient = UiDrivenLogin.Authenticate(TenantUrl, UserName_TextBox.Text + DefaultDomain);
 
         if (authenticationClient != null)
         {
