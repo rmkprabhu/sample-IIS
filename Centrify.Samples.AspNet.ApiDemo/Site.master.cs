@@ -69,32 +69,19 @@ public partial class SiteMaster : MasterPage
     {
         if (Session["isLoggedIn"] != null)
         {
-            if (Session["isLoggedIn"].ToString() != "true")
+            if (Session["isLoggedIn"].ToString() == "true")
             {
-                MyAccount.Visible = false;
-                Applications.Visible = false;
-                Manage.Visible = false;
-            }
-            else
-            {
+                MyAccount.Visible = true;
+                Applications.Visible = true;
+
                 if (Session["isAdmin"] != null)
                 {
-                    if (Session["isAdmin"].ToString() != "true")
+                    if (Session["isAdmin"].ToString() == "true")
                     {
-                        Manage.Visible = false;
+                        Manage.Visible = true;
                     }
                 }
-                else
-                {
-                    Manage.Visible = false;
-                }
             }
-        }
-        else
-        {
-            MyAccount.Visible = false;
-            Applications.Visible = false;
-            Manage.Visible = false;
         }
     }
 

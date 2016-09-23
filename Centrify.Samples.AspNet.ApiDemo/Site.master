@@ -84,9 +84,9 @@
                                                     <div class="navbar-collapse collapse">
                                                         <ul class="nav navbar-nav">
                                                             <li><a runat="server" href="~/Default">Home</a></li>
-                                                            <li><a id="Applications" runat="server" href="~/Applications">Applications</a></li>                                                           
-                                                            <li><a id="Manage" runat="server" href="~/Manage">Manage</a></li>
-                                                            <li><a id="MyAccount" runat="server" href="~/MyAccount">MyAccount</a></li>
+                                                            <li><a id="Applications" visible ="false" runat="server" href="~/Applications">Applications</a></li>                                                           
+                                                            <li><a id="Manage" visible ="false" runat="server" href="~/Manage">Manage</a></li>
+                                                            <li><a id="MyAccount" visible ="false" runat="server" href="~/MyAccount">MyAccount</a></li>
                                                             <!--<li><a runat="server" href="~/Register">Register</a></li>-->
                                                             <li><a runat="server" href="~/Login">Login</a></li>
                                                         </ul>                                                        
