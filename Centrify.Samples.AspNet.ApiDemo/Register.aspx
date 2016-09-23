@@ -72,7 +72,7 @@
                         <asp:RequiredFieldValidator runat="server" ControlToValidate="Password" CssClass="text-danger" ErrorMessage="The Password field is required." />
                         <asp:Label runat="server" ID="Passwword_Label" AssociatedControlID="Password" CssClass="col-md-2 control-label">Password</asp:Label>
                         <div class="col-md-3">
-                            <asp:TextBox runat="server" ID="Password" CssClass="form-control" />
+                            <asp:TextBox runat="server" ID="Password" TextMode="Password" CssClass="form-control" />
                         </div>
                     </div>
                     <br />
@@ -80,7 +80,7 @@
                         <asp:RequiredFieldValidator runat="server" ControlToValidate="Confirm_Password" CssClass="text-danger" ErrorMessage="The Confirm Password field is required." />
                         <asp:Label runat="server" ID="Confirm_Password_Label" AssociatedControlID="Confirm_Password" CssClass="col-md-2 control-label">Confirm Password</asp:Label>
                         <div class="col-md-3">
-                            <asp:TextBox runat="server" ID="Confirm_Password" CssClass="form-control" />
+                            <asp:TextBox runat="server" ID="Confirm_Password" TextMode="Password" CssClass="form-control" />
                         </div>
                     </div>
                     <br />
