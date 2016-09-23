@@ -29,13 +29,15 @@ public partial class Login : System.Web.UI.Page
 
     protected void Page_Load(object sender, EventArgs e)
     {
-        //Used for continuing social login
-        if (Request.QueryString["ExtIdpAuthChallengeState"] != null)
+        if (!IsPostBack)
         {
-            Continue_Social_Login(Request.QueryString["ExtIdpAuthChallengeState"]);
-            Login_Div.Visible = false;
-            SocialLogin_Div.Visible = false;
-        }        
+            //Used for continuing social login
+            if (Request.QueryString["ExtIdpAuthChallengeState"] != null)
+            {
+                Continue_Social_Login(Request.QueryString["ExtIdpAuthChallengeState"]);                
+                SocialLogin_Div.Visible = false;
+            }
+        }
     }
     protected void StartAuthentication(object sender, EventArgs e)
     {
@@ -269,7 +271,7 @@ public partial class Login : System.Web.UI.Page
 
         //Once one challenge list has been completed, start the next one.
         if (resultsDictionary["Result"]["Summary"] == "StartNextChallenge")
-        {            
+        {
             ProcessChallenges(authenticationClient.ChallengeCollection, true);
         }
         //If a new package was presented, start advance auth over again.
@@ -313,6 +315,7 @@ public partial class Login : System.Web.UI.Page
         return result;
     }
 
+    //**IMPROVMENT REQUIRED: Move Social authenticaiton methods to API LIB
     protected void SocialLogin(object sender, EventArgs e)
     {
         string strIDPName = "";
@@ -345,6 +348,7 @@ public partial class Login : System.Web.UI.Page
         {
             //There was an error
             Login_Div.Visible = false;
+            SocialLogin_Div.Visible = false;
             FailureText.Text = "There was an unexpected error. Please contact your system administrator. Click here to <a href=\"Login.aspx\">start over.</a>";
             ErrorMessage.Visible = true;
         }
@@ -354,19 +358,33 @@ public partial class Login : System.Web.UI.Page
         RestClient authenticationClient = (RestClient)Session["AuthenticaitonClient"];
         Dictionary<string, dynamic> socialLoginResult = UiDrivenLogin.ContinueSocialAuth(authenticationClient, strExtIdpAuthChallengeState);
 
+        authenticationClient.TenantId = socialLoginResult["Result"]["TenantId"];
+        authenticationClient.SessionId = socialLoginResult["Result"]["SessionId"];
+
         if (socialLoginResult["success"].ToString() == "True")
         {
-            //Login Complete
-            Login_Div.Visible = false;
-            Session["OTP"] = socialLoginResult["Result"]["Auth"];
+            if (socialLoginResult["Result"]["Summary"] == "LoginSuccess")
+            {
+                //Login Complete
+                Login_Div.Visible = false;
+                Session["OTP"] = socialLoginResult["Result"]["Auth"];
 
-            if (Request.QueryString["redirect"] != null)
-            {
-                Server.Transfer(Request.QueryString["redirect"], true);
+                if (Request.QueryString["redirect"] != null)
+                {
+                    Server.Transfer(Request.QueryString["redirect"], true);
+                }
+                else
+                {
+                    Server.Transfer("Default.aspx", true);
+                }
             }
-            else
+            else if (socialLoginResult["Result"]["Summary"] == "NewPackage")
             {
-                Server.Transfer("Default.aspx", true);
+                authenticationClient.ChallengeCollection = socialLoginResult["Result"]["Challenges"];
+                Session["AuthenticaitonClient"] = authenticationClient;
+                ProcessChallenges(socialLoginResult["Result"]["Challenges"]);
+                UserName_Label.Visible = false;
+                UserName_TextBox.Visible = false;
             }
         }
         else
