@@ -118,6 +118,7 @@
                 <h3>Or Sign In With</h3>
                 <br />
                 <div class="row">
+                    <%--<asp:Button ID="SocialLogin_FB_Button" runat="server" OnClick="SocialLogin" Text="Sign in with Facebook" CssClass="btn-social btn-facebook" />--%>
                     <asp:ImageButton ID="SocialLogin_FB_Button" runat="Server" ImageUrl="~/Images/login-fb.png" OnClick="SocialLogin" />
                     <asp:ImageButton ID="SocialLogin_Google_Button" runat="Server" ImageUrl="~/Images/login-g.png" OnClick="SocialLogin" />
                 </div>

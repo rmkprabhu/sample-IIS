@@ -31,6 +31,7 @@
     <webopt:BundleReference runat="server" Path="~/Content/css" />
     <link rel="stylesheet" href="Content/reset.css" type="text/css" media="all">
     <link rel="stylesheet" href="Content/bootstrap.css" type="text/css" media="all">
+    <link rel="stylesheet" href="Content/bootstrap-social.css" type="text/css" media="all">
     <link rel="stylesheet" href="Content/style.css" type="text/css" media="all">
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
 
