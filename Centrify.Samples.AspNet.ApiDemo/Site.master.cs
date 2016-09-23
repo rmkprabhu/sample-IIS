@@ -67,11 +67,34 @@ public partial class SiteMaster : MasterPage
 
     protected void Page_Load(object sender, EventArgs e)
     {
-        if (Session["AuthenticaitonClient"] == null)
+        if (Session["isLoggedIn"] != null)
         {
-            Manage.Visible = false;
+            if (Session["isLoggedIn"].ToString() != "true")
+            {
+                MyAccount.Visible = false;
+                Applications.Visible = false;
+                Manage.Visible = false;
+            }
+            else
+            {
+                if (Session["isAdmin"] != null)
+                {
+                    if (Session["isAdmin"].ToString() != "true")
+                    {
+                        Manage.Visible = false;
+                    }
+                }
+                else
+                {
+                    Manage.Visible = false;
+                }
+            }
+        }
+        else
+        {
             MyAccount.Visible = false;
             Applications.Visible = false;
+            Manage.Visible = false;
         }
     }
 

@@ -34,7 +34,7 @@ public partial class Login : System.Web.UI.Page
             //Used for continuing social login
             if (Request.QueryString["ExtIdpAuthChallengeState"] != null)
             {
-                Continue_Social_Login(Request.QueryString["ExtIdpAuthChallengeState"]);                
+                Continue_Social_Login(Request.QueryString["ExtIdpAuthChallengeState"]);
                 SocialLogin_Div.Visible = false;
             }
         }
@@ -289,6 +289,17 @@ public partial class Login : System.Web.UI.Page
             Session["OTP"] = resultsDictionary["Result"]["Auth"];
             //Make sure our fully authenticated client is updated in the session.
             Session["AuthenticaitonClient"] = authenticationClient;
+            Session["isLoggedIn"] = "true";
+
+            UserManagement userManagementClient = new UserManagement(authenticationClient);
+
+            //Check if user is admin
+            Dictionary<string, dynamic> getUserInfo = userManagementClient.GetUserInfo();
+
+            if (getUserInfo["Result"]["IsSysAdmin"])
+            {
+                Session["isAdmin"] = "true";
+            }
 
             if (Request.QueryString["redirect"] != null)
             {
@@ -368,6 +379,18 @@ public partial class Login : System.Web.UI.Page
                 //Login Complete
                 Login_Div.Visible = false;
                 Session["OTP"] = socialLoginResult["Result"]["Auth"];
+
+                Session["isLoggedIn"] = "true";
+
+                UserManagement userManagementClient = new UserManagement(authenticationClient);
+
+                //Check if user is admin
+                Dictionary<string, dynamic> getUserInfo = userManagementClient.GetUserInfo();
+
+                if (getUserInfo["Result"]["IsSysAdmin"])
+                {
+                    Session["isAdmin"] = "true";
+                }
 
                 if (Request.QueryString["redirect"] != null)
                 {

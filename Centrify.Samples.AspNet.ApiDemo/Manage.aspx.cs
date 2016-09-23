@@ -21,7 +21,7 @@ public partial class Manage : System.Web.UI.Page
             //Create a new userManagementClient and pass our authenticated rest client from our login call.
             UserManagement userManagementClient = new UserManagement(authenticationClient);
 
-            //Get a list of all tenant Aliases
+            //Check if user is admin
             Dictionary<string, dynamic> getUserInfo = userManagementClient.GetUserInfo();
 
             if (!getUserInfo["Result"]["IsSysAdmin"])
