@@ -55,7 +55,7 @@
             <div id="Login_Div" runat="server">
                 <br />
                 <h3>Please Sign In</h3>
-                This page is a full integration of Centrify Adaptive Authentication, which includes support for Custom Authentication Profiles, MFA, and Social Login. This page was created using the <a runat="server" href="http://developer.centrify.com/site/global/documentation/api_reference/security/start_authentication/index.gsp">security/start_authentication </a> API and the <a runat="server" href="http://developer.centrify.com/site/global/documentation/api_reference/security/advance_authentication/index.gsp">security/advance_authentication </a> API. For more information, please visit the <a runat="server" href="http://developer.centrify.com/site/global/documentation/api_guide/authenticating_users/index.gsp">Authenticating Users </a> guide on the developer portal. 
+                This page is a full integration of Centrify Adaptive Authentication, which includes support for Custom Authentication Profiles, MFA, and Social Login. This page was created using the <a runat="server" href="http://developer.centrify.com/site/global/documentation/api_reference/security/start_authentication/index.gsp">security/start_authentication </a>API and the <a runat="server" href="http://developer.centrify.com/site/global/documentation/api_reference/security/advance_authentication/index.gsp">security/advance_authentication </a>API. For more information, please visit the <a runat="server" href="http://developer.centrify.com/site/global/documentation/api_guide/authenticating_users/index.gsp">Authenticating Users </a>guide on the developer portal. 
                 <br />
                 <hr />
                 <br />
@@ -101,7 +101,7 @@
                             <asp:Button ID="AdvanceAuthentication_Next_Button" runat="server" OnClick="AdvanceAuthentication" OnClientClick="DisplayLoadingDiv()" Text="Next" CssClass="btn btn-default" Visible="false" />
                         </div>
                         <div class="col-md-offset-5" runat="server" id="Register_HyperLink_Div">
-                            Need and account?
+                            Need an account?
                                 <asp:HyperLink ID="Register_HyperLink" runat="server" Text="Register" NavigateUrl="~/Register.aspx" />
                             here.
                         </div>
@@ -118,13 +118,22 @@
                 <h3>Or Sign In With</h3>
                 <br />
                 <div class="row">
-                    <%--<asp:Button ID="SocialLogin_FB_Button" runat="server" OnClick="SocialLogin" Text="Sign in with Facebook" CssClass="btn-social btn-facebook" />--%>
-                    <asp:ImageButton ID="SocialLogin_FB_Button" runat="Server" ImageUrl="~/Images/login-fb.png" OnClick="SocialLogin" />
-                    <asp:ImageButton ID="SocialLogin_Google_Button" runat="Server" ImageUrl="~/Images/login-g.png" OnClick="SocialLogin" />
+                    <div class="col-sm-4 social-buttons">
+                    <a class="btn btn-block btn-social btn-facebook" id="SocialLogin_FB_Button" runat="Server" onserverclick="SocialLogin">
+                        <span class="fa fa-facebook"></span>Sign in with Facebook
+                    </a>                  
+                    <a class="btn btn-block btn-social btn-google" id="SocialLogin_Google_Button" runat="Server" onserverclick="SocialLogin">
+                        <span class="fa fa-google"></span>Sign in with Goolge
+                    </a>
                 </div>
-                <div class="row">
-                    <asp:ImageButton ID="SocialLogin_LinkedIn_Button" runat="Server" ImageUrl="~/Images/login-li.png" OnClick="SocialLogin" />
-                    <asp:ImageButton ID="SocialLogin_Microsoft_Button" runat="Server" ImageUrl="~/Images/login-ms.png" OnClick="SocialLogin" />
+                <div class="col-sm-4 social-buttons">                
+                    <a class="btn btn-block btn-social btn-linkedin" id="SocialLogin_LinkedIn_Button" runat="Server" onserverclick="SocialLogin">
+                        <span class="fa fa-linkedin"></span>Sign in with LinkedIn
+                    </a>                  
+                    <a class="btn btn-block btn-social btn-microsoft" id="SocialLogin_Microsoft_Button" runat="Server" onserverclick="SocialLogin">
+                        <span class="fa fa-windows"></span>Sign in with Microsoft
+                    </a>
+                </div>
                 </div>
             </div>
         </div>

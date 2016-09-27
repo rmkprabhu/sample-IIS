@@ -32,6 +32,8 @@
     <link rel="stylesheet" href="Content/reset.css" type="text/css" media="all">
     <link rel="stylesheet" href="Content/bootstrap.css" type="text/css" media="all">
     <link rel="stylesheet" href="Content/bootstrap-social.css" type="text/css" media="all">
+    <link rel="stylesheet" href="Content/font-awesome.css" type="text/css" media="all" >
+    <link rel="stylesheet" href="Content/docs.css" type="text/css" media="all">
     <link rel="stylesheet" href="Content/style.css" type="text/css" media="all">
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
 
@@ -56,6 +58,7 @@
                 <asp:ScriptReference Name="Focus.js" Assembly="System.Web" Path="~/Scripts/WebForms/Focus.js" />
                 <asp:ScriptReference Name="WebFormsBundle" />
                 <asp:ScriptReference Path="Scripts/FixFocus.js" />
+                <asp:ScriptReference Path="Scripts/docs.js" />
                 <%--Site Scripts--%>
             </Scripts>
         </asp:ScriptManager>
@@ -66,9 +69,9 @@
                     <div class="row">
                         <nav class="navbar" role="navigation">
                             <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 ">
-                                <a class="" href="http://www.centrify.com/" title="Centrify">
+                                <a class="" href="~/Default" runat="server" title="API Demo">
                                     <div class="sfimageWrp">
-                                        <img id="logoPlaceholder_T04B0B661001_ctl00_ctl00_imageItem" title="MedAvante" src="/images/logo.png" alt="Centrify">
+                                        <img id="logoPlaceholder_T04B0B661001_ctl00_ctl00_imageItem" title="API Demo" src="/images/logo.png" alt="API Demo">
                                     </div>
                                 </a>
                             </div>
