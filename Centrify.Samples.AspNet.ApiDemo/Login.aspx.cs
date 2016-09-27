@@ -110,6 +110,7 @@ public partial class Login : System.Web.UI.Page
 
         StartAuthentication_Next_Button.Visible = false;
         AdvanceAuthentication_Next_Button.Visible = true;
+        Form.DefaultButton = AdvanceAuthentication_Next_Button.UniqueID;
         MFAChallenge_DropDownList.Visible = true;
         MFAChallenge_DropDownList_Label.Visible = true;
 

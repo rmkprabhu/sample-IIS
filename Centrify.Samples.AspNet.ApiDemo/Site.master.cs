@@ -1,12 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Security.Claims;
-using System.Security.Principal;
 using System.Web;
 using System.Web.Security;
 using System.Web.UI;
-using System.Web.UI.WebControls;
-using Centrify.Samples.AspNet.ApiLib;
+
 
 public partial class SiteMaster : MasterPage
 {
@@ -73,6 +69,8 @@ public partial class SiteMaster : MasterPage
             {
                 MyAccount.Visible = true;
                 Applications.Visible = true;
+                Login.Visible = false;
+                Logout_Button.Visible = true;
 
                 if (Session["isAdmin"] != null)
                 {
@@ -83,10 +81,5 @@ public partial class SiteMaster : MasterPage
                 }
             }
         }
-    }
-
-    protected void Unnamed_LoggingOut(object sender, LoginCancelEventArgs e)
-    {
-        Context.GetOwinContext().Authentication.SignOut();
     }
 }

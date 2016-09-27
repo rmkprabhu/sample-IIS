@@ -92,7 +92,8 @@
                                                             <li><a id="Manage" visible ="false" runat="server" href="~/Manage">Manage</a></li>
                                                             <li><a id="MyAccount" visible ="false" runat="server" href="~/MyAccount">MyAccount</a></li>
                                                             <!--<li><a runat="server" href="~/Register">Register</a></li>-->
-                                                            <li><a runat="server" href="~/Login">Login</a></li>
+                                                            <li><a runat="server" id="Login" href="~/Login">Login</a></li>
+                                                            <li><a runat="server" id="Logout_Button" visible ="false" href="~/Logout">Logout</a></li>
                                                         </ul>                                                        
                                                     </div>
                                                 </div>
