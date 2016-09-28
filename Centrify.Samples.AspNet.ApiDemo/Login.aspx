@@ -58,6 +58,9 @@
                 This page is a full integration of Centrify Adaptive Authentication, which includes support for Custom Authentication Profiles, MFA, and Social Login. This page was created using the <a runat="server" href="http://developer.centrify.com/site/global/documentation/api_reference/security/start_authentication/index.gsp">security/start_authentication </a>API and the <a runat="server" href="http://developer.centrify.com/site/global/documentation/api_reference/security/advance_authentication/index.gsp">security/advance_authentication </a>API. For more information, please visit the <a runat="server" href="http://developer.centrify.com/site/global/documentation/api_guide/authenticating_users/index.gsp">Authenticating Users </a>guide on the developer portal. 
                 <br />
                 <hr />
+                <div class="col-md-2 col-md-offset-4" runat="server">
+                    <a id="StartOver_Button" runat="server" visible="false" onserverclick="StartOver">Start Over</a>
+                </div>
                 <br />
                 <div class="row">
                     <div class="row">
@@ -88,7 +91,7 @@
                     <br />
                     <div class="row">
                         <div class="col-xs-2  col-sm-offset-2" runat="server" id="ForgotPass_Button_Div">
-                            <asp:Button ID="ForgotPass_Button" runat="server" OnClick="AdvanceAuthentication" OnClientClick="DisplayLoadingDiv()" Text="Forgot Password" CssClass="btn btn-default" Visible="false" />
+                            <a id="ForgotPass_Button" runat="server" visible="false" onserverclick="AdvanceAuthentication">Forgot Password</a>
                         </div>
                         <div class="col-xs-2" runat="server" id="RememberMe_Div" visible="false">
                             <asp:CheckBox runat="server" ID="RememberMe" />
@@ -105,6 +108,7 @@
                                 <asp:HyperLink ID="Register_HyperLink" runat="server" Text="Register" NavigateUrl="~/Register.aspx" />
                             here.
                         </div>
+
                     </div>
                     <div>
                         <asp:Timer ID="StartTextOob_Timer" runat="server" OnTick="StartTextOob_TimerTick" Interval="7000" Enabled="false"></asp:Timer>
@@ -119,21 +123,21 @@
                 <br />
                 <div class="row">
                     <div class="col-sm-4 social-buttons">
-                    <a class="btn btn-block btn-social btn-facebook" id="SocialLogin_FB_Button" runat="Server" onserverclick="SocialLogin">
-                        <span class="fa fa-facebook"></span>Sign in with Facebook
-                    </a>                  
-                    <a class="btn btn-block btn-social btn-google" id="SocialLogin_Google_Button" runat="Server" onserverclick="SocialLogin">
-                        <span class="fa fa-google"></span>Sign in with Goolge
-                    </a>
-                </div>
-                <div class="col-sm-4 social-buttons">                
-                    <a class="btn btn-block btn-social btn-linkedin" id="SocialLogin_LinkedIn_Button" runat="Server" onserverclick="SocialLogin">
-                        <span class="fa fa-linkedin"></span>Sign in with LinkedIn
-                    </a>                  
-                    <a class="btn btn-block btn-social btn-microsoft" id="SocialLogin_Microsoft_Button" runat="Server" onserverclick="SocialLogin">
-                        <span class="fa fa-windows"></span>Sign in with Microsoft
-                    </a>
-                </div>
+                        <a class="btn btn-block btn-social btn-facebook" id="SocialLogin_FB_Button" runat="Server" onserverclick="SocialLogin">
+                            <span class="fa fa-facebook"></span>Sign in with Facebook
+                        </a>
+                        <a class="btn btn-block btn-social btn-google" id="SocialLogin_Google_Button" runat="Server" onserverclick="SocialLogin">
+                            <span class="fa fa-google"></span>Sign in with Goolge
+                        </a>
+                    </div>
+                    <div class="col-sm-4 social-buttons">
+                        <a class="btn btn-block btn-social btn-linkedin" id="SocialLogin_LinkedIn_Button" runat="Server" onserverclick="SocialLogin">
+                            <span class="fa fa-linkedin"></span>Sign in with LinkedIn
+                        </a>
+                        <a class="btn btn-block btn-social btn-microsoft" id="SocialLogin_Microsoft_Button" runat="Server" onserverclick="SocialLogin">
+                            <span class="fa fa-windows"></span>Sign in with Microsoft
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>

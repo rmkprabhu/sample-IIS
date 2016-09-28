@@ -58,6 +58,7 @@ public partial class Login : System.Web.UI.Page
             }
 
             RememberMe_Div.Visible = true;
+            StartOver_Button.Visible = true;
         }
         else
         {
@@ -419,5 +420,9 @@ public partial class Login : System.Web.UI.Page
             ErrorMessage.Visible = true;
         }
 
+    }
+    protected void StartOver(object sender, EventArgs e)
+    {
+        Response.Redirect(Request.RawUrl);
     }
 }
