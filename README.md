@@ -48,8 +48,8 @@ the development needed to create a custom web based UI.
 
  # Installation and use Instructions:
 
-Note: Installation may differ from environment to environment. Below are the most common steps needed.
-Note: 2: The API Demo project can also be installed via The Publish Web feature in Visual Studio. This automates deployment completely.
+ Note: Installation may differ from environment to environment. Below are the most common steps needed.
+ Note: 2: The API Demo project can also be installed via The Publish Web feature in Visual Studio. This automates deployment completely.
 
 1. Install IIS on a Windows Server and ensure that all .NET and ASP features are installed via server manager. A majority of all deployment issues where the site will not launch is caused by not having the correct features installed.
 2. Download the API Demo repository and place in the Windows Server wwwroot folder or a folder of your choice. 
