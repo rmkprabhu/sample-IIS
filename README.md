@@ -33,7 +33,7 @@ the development needed to create a custom web based UI.
   6. Logout.aspx
       - The Logout page contains logic to assist with logging the user out of their Centrify session.
       
- # Website Design Details:    
+  # Website Design Details:    
  
  The API Demo sample project was built using ASP.Net (HTML, CSS, and JavaScript), and C# (server side code). 
  
@@ -46,7 +46,7 @@ the development needed to create a custom web based UI.
  The Web.config for the API Demo contains many settings that need to be configured on a per environment basis. 
       
 
-# Installation and use Instructions:
+ # Installation and use Instructions:
 
 Note: Installation may differ from environment to environment. Below are the most common steps needed.
 Note: 2: The API Demo project can also be installed via The Publish Web feature in Visual Studio. This automates deployment completely.
