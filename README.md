@@ -60,17 +60,17 @@ the development needed to create a custom web based UI.
 
  "TenantUrl" value="https://tenant.centrify.com"
  
-    Note: This can be found by logging into your tenant and looking at the URL after login. Do not include anything after .com here.
+   Note: This can be found by logging into your tenant and looking at the URL after login. Do not include anything after .com here.
     
  "AdminServiceAccount" value="user@domain"
  
-    Note: The user account used as an admin service account needs to have a policy set up in Centrify that does not require MFA. The service account in this example is coded to only use User/Pass for authentication.
+   Note: The user account used as an admin service account needs to have a policy set up in Centrify that does not require MFA. The service account in this example is coded to only use User/Pass for authentication.
     
  "AdminServicePass" value="pass" 
  
  "DefaultDomain" value="@yourdomain.com"
  
-    Note: This domain is hidden from the user. This is the domain that all users that use the registration screen will be created under and it is the domain that all usernames will be concatenated with in the login page.
+   Note: This domain is hidden from the user. This is the domain that all users that use the registration screen will be created under and it is the domain that all usernames will be concatenated with in the login page.
     
  
 
