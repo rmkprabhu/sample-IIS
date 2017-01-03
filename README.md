@@ -52,21 +52,24 @@ the development needed to create a custom web based UI.
  
  Note: 2: The API Demo project can also be installed via The Publish Web feature in Visual Studio. This automates deployment completely.
 
-1. Install IIS on a Windows Server and ensure that all .NET and ASP features are installed via server manager. A majority of all deployment issues where the site will not launch is caused by not having the correct features installed.
-2. Download the API Demo repository and place in the Windows Server wwwroot folder or a folder of your choice. 
-3. Make sure folder permissions are set to your appropriate audience and user level on your network. 
-4. Set up the web application in IIS and point it to the folder created in step 2. Please reference Microsoft documentation on how to do this.
-5. Customize the site Web.config. The Web.Config will have the following options that need to be customized.
+  1. Install IIS on a Windows Server and ensure that all .NET and ASP features are installed via server manager. A majority of all deployment issues where the site will not launch is caused by not having the correct features installed.
+  2. Download the API Demo repository and place in the Windows Server wwwroot folder or a folder of your choice. 
+  3. Make sure folder permissions are set to your appropriate audience and user level on your network. 
+  4. Set up the web application in IIS and point it to the folder created in step 2. Please reference Microsoft documentation on how to do this.
+  5. Customize the site Web.config. The Web.Config will have the following options that need to be customized.
 
  "TenantUrl" value="https://tenant.centrify.com"
+ 
     Note: This can be found by logging into your tenant and looking at the URL after login. Do not include anything after .com here.
     
  "AdminServiceAccount" value="user@domain"
+ 
     Note: The user account used as an admin service account needs to have a policy set up in Centrify that does not require MFA. The service account in this example is coded to only use User/Pass for authentication.
     
  "AdminServicePass" value="pass" 
  
  "DefaultDomain" value="@yourdomain.com"
+ 
     Note: This domain is hidden from the user. This is the domain that all users that use the registration screen will be created under and it is the domain that all usernames will be concatenated with in the login page.
     
  
