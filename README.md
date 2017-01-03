@@ -57,12 +57,15 @@ the development needed to create a custom web based UI.
 4. Set up the web application in IIS and point it to the folder created in step 2. Please reference Microsoft documentation on how to do this.
 5. Customize the site Web.config. The Web.Config will have the following options that need to be customized.
 
- "<add key="TenantUrl" value="https://tenant.centrify.com" />"
+ "TenantUrl" value="https://tenant.centrify.com"
     Note: This can be found by logging into your tenant and looking at the URL after login. Do not include anything after .com here.
- <add key="AdminServiceAccount" value="user@domain" />
+    
+ "AdminServiceAccount" value="user@domain"
     Note: The user account used as an admin service account needs to have a policy set up in Centrify that does not require MFA. The service account in this example is coded to only use User/Pass for authentication.
- <add key="AdminServicePass" value="pass" />
- <add key="DefaultDomain" value="@yourdomain.com" />
+    
+ "AdminServicePass" value="pass" 
+ 
+ "DefaultDomain" value="@yourdomain.com"
     Note: This domain is hidden from the user. This is the domain that all users that use the registration screen will be created under and it is the domain that all usernames will be concatenated with in the login page.
     
  
