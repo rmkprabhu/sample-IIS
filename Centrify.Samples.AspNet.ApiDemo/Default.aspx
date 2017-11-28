@@ -28,7 +28,7 @@
         <hr />
         <br />
         <h4>Introduction</h4>
-        The Centrify Identity Platform (CIP) is the power behind many popular Centrify products such as <a runat="server" href="https://www.centrify.com/products/identity-service/">Centrtify Identity Service </a>, and <a runat="server" href="https://www.centrify.com/products/privilege-service/">Centrify Privilege Service. </a>CIP is not just available for Centrify products to use, however, which is why every powerful feature of the platform is available to developers via RESTful API's. Every feature of Centrify Identify Service can be integrated into your own websites and products. MFA can be integrated into your own applications. Identity management can be simplified for your customer facing products and websites. The possibilities are many with the Centrify Identity Platform. 
+        The Centrify Identity Platform (CIP) is the power behind many popular Centrify products such as <a runat="server" href="https://www.centrify.com/products/identity-service/">Centrtify Application Services </a>, and <a runat="server" href="https://www.centrify.com/products/privilege-service/">Centrify Infrastructure Services. </a>CIP is not just available for Centrify products to use, however, which is why every powerful feature of the platform is available to developers via RESTful API's. Every feature of Centrify Application Service can be integrated into your own websites and products. MFA can be integrated into your own applications. Identity management can be simplified for your customer facing products and websites. The possibilities are many with the Centrify Identity Platform. 
 
         <br />
         <br />

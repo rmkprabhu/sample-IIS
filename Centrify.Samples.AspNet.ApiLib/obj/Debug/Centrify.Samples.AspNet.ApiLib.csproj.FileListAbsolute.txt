@@ -12,3 +12,9 @@ C:\Users\nick.gamb\Documents\Visual Studio 2015\Projects\centrify-samples-aspnet
 C:\Users\nick.gamb\Documents\Visual Studio 2015\Projects\centrify-samples-aspnet-server\Centrify.Samples.AspNet.ApiLib\obj\Debug\Centrify.Samples.AspNet.ApiLib.csprojResolveAssemblyReference.cache
 C:\Users\nick.gamb\Documents\Visual Studio 2015\Projects\centrify-samples-aspnet-server\Centrify.Samples.AspNet.ApiLib\obj\Debug\Centrify.Samples.AspNet.ApiLib.dll
 C:\Users\nick.gamb\Documents\Visual Studio 2015\Projects\centrify-samples-aspnet-server\Centrify.Samples.AspNet.ApiLib\obj\Debug\Centrify.Samples.AspNet.ApiLib.pdb
+C:\Users\nick.gamb\Documents\Github\centrify-samples-aspnet-server\Centrify.Samples.AspNet.ApiLib\bin\Debug\Centrify.Samples.AspNet.ApiLib.dll
+C:\Users\nick.gamb\Documents\Github\centrify-samples-aspnet-server\Centrify.Samples.AspNet.ApiLib\bin\Debug\Centrify.Samples.AspNet.ApiLib.pdb
+C:\Users\nick.gamb\Documents\Github\centrify-samples-aspnet-server\Centrify.Samples.AspNet.ApiLib\obj\Debug\Centrify.Samples.AspNet.ApiLib.csprojResolveAssemblyReference.cache
+C:\Users\nick.gamb\Documents\Github\centrify-samples-aspnet-server\Centrify.Samples.AspNet.ApiLib\obj\Debug\Centrify.Samples.AspNet.ApiLib.csproj.CoreCompileInputs.cache
+C:\Users\nick.gamb\Documents\Github\centrify-samples-aspnet-server\Centrify.Samples.AspNet.ApiLib\obj\Debug\Centrify.Samples.AspNet.ApiLib.dll
+C:\Users\nick.gamb\Documents\Github\centrify-samples-aspnet-server\Centrify.Samples.AspNet.ApiLib\obj\Debug\Centrify.Samples.AspNet.ApiLib.pdb
